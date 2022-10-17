@@ -1,0 +1,51 @@
+# Question 1:
+# Select Employee's Name
+# From Employees table
+# Join with the departments table 
+# Where department equals Name
+
+# Question 2:
+# Subquery
+# Select department name 
+# From department table
+
+# Actual Query
+# Select employee name
+# From Employees table
+# Join with the departments table
+# department name not in Subquery
+
+# Question 3:
+# Under appointments model:
+
+# belongs_to :physician
+#     primary_key: :id,
+#     foreign_key: :physician_id,
+#     class_name: :Physician
+
+# belongs_to :patient,
+#     primary_key: :id,
+#     foreign_key: :patient_id,
+#     class_name: :Patient
+
+# Physicians:
+#     has_many :appointments,
+#         primary_key: :id,
+#         foreign_key: :physician_id,
+#         class_name: :Appointment
+    
+#     has_many :patients,
+#         primary_key: :id,
+#         foreign_key: :primary_physician_id,
+#         class_name: :Patient
+
+# Patients:
+#     has_many :appointments,
+#         primary_key: :id,
+#         foreign_key: :patient_id,
+#         class_name: :Appointment
+
+#     belongs_to :primary_physician,
+#         primary_key: :id,
+#         foreign_key: :primary_physician_id,
+#         class_name: :Physician
